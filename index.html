@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marketplace de Roupas Femininas</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script defer src="assets/js/script.Js"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1>Roupas da Ju!</h1>
+            <!-- Botão do menu hambúrguer -->
+            <button class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav>
+                <ul class="nav-menu" id="nav-menu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">Sobre</a></li>
+                    <li><a href="#contact">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <main class="main-content">
+        <section class="product-list">
+            <h2>Nossos Produtos</h2>
+            <div class="products">
+                <!-- Primeira Lista de Produtos -->
+                <div class="product-card" data-id="1" data-name="Vestido Flora" data-price="129.90">
+                    <img src="assets/images/Vestido 1.jpeg" alt="Produto 1">
+                    <h3>Vestido Flora</h3>
+                    <p>R$ 129,90</p>
+                    <button class="btn add-to-cart">Adicionar ao Carrinho</button>
+                </div>
+                <div class="product-card" data-id="2" data-name="Vestido Diana" data-price="89.90">
+                    <img src="assets/images/Vestido 2.jpeg"Produto 2">
+                    <h3>Vestido Diana</h3>
+                    <p>R$ 89,90</p>
+                    <button class="btn add-to-cart">Adicionar ao Carrinho</button>
+                </div>
+                <div class="product-card" data-id="3" data-name="Vestido Layla" data-price="149.90">
+                    <img src="assets/images/Vestido 3.jpeg" alt="Produto 3">
+                    <h3>Vestido Layla</h3>
+                    <p>R$ 149,90</p>
+                    <button class="btn add-to-cart">Adicionar ao Carrinho</button>
+                </div>
+                <!-- Segunda Lista de Produtos -->
+                <div class="product-card" data-id="4" data-name="Vestido Sophia" data-price="199.90">
+                    <img src="assets/images/Vestido 4.jpg" alt="Produto 4">
+                    <h3>Vestido Sophia</h3>
+                    <p>R$ 199,90</p>
+                    <button class="btn add-to-cart">Adicionar ao Carrinho</button>
+                </div>
+                <div class="product-card" data-id="5" data-name="Vestido Ana" data-price="79.90">
+                    <img src="assets/images/Vestido 5.jpeg" alt="Produto 5">
+                    <h3>Vestido Ana</h3>
+                    <p>R$ 79,90</p>
+                    <button class="btn add-to-cart">Adicionar ao Carrinho</button>
+                </div>
+                <div class="product-card" data-id="6" data-name="Vestido Marina" data-price="99.90">
+                    <img src="assets/images/Vestido 6.jpeg" alt="Produto 6">
+                    <h3>Vestido Marina</h3>
+                    <p>R$ 99,90</p>
+                    <button class="btn add-to-cart">Adicionar ao Carrinho</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="cart">
+            <h2>Carrinho de Compras</h2>
+            <div class="cart-items">
+                <p>Carrinho vazio.</p>
+            </div>
+            <div class="cart-total">
+                <h3>Total: R$ <span id="cart-total">0.00</span></h3>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 Roupas da Ju! - Todos os direitos reservados</p>
+    </footer>
+</body>
+</html>

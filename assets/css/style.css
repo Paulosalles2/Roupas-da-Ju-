@@ -1,0 +1,199 @@
+:root {
+    --cor-principal: #cf297c;
+    --cor-de-fundo: #ffffe6;
+    --text-color: #333;
+    --cor-borda: #ddd;
+    --hover-cor-principal: #e7539d;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: var(--cor-de-fundo);
+    color: var(--text-color);
+}
+
+/* Cabeçalho */
+.header {
+    background-color: var(--cor-principal);
+    color: var(--cor-de-fundo);
+    padding: 1rem 0;
+}
+
+.header .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header h1 {
+    font-size: 2rem;
+}
+
+/* Estilos para o menu hambúrguer */
+.hamburger {
+    display: none; /* Inicialmente oculto */
+    flex-direction: column;
+    justify-content: space-between;
+    width: 25px;
+    height: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.hamburger span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: var(--cor-de-fundo);
+    border-radius: 3px;
+    transition: all 0.3s;
+}
+
+/* Oculta o menu no mobile */
+.nav-menu {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+    flex-direction: row; /* Padrão para telas maiores */
+}
+
+.nav-menu.active {
+    display: flex; /* Exibido ao clicar no botão hambúrguer */
+}
+
+/* Conteúdo principal */
+.main-content {
+    padding: 2rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.product-list h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+    color: var(--cor-principal);
+}
+
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.product-card {
+    background: var(--cor-de-fundo);
+    border: 1px solid var(--cor-borda);
+    border-radius: 5px;
+    padding: 1rem;
+    width: 300px;
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+.product-card:hover {
+    transform: scale(1.05);
+}
+
+.product-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.product-card h3 {
+    margin: 1rem 0 0.5rem;
+    color: var(--text-color);
+}
+
+.product-card p {
+    font-size: 1.2rem;
+    color: var(--text-color);
+    margin-bottom: 1rem;
+}
+
+.btn {
+    background-color: var(--cor-principal);
+    color: var(--cor-de-fundo);
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.btn:hover {
+    background-color: var(--hover-cor-principal);
+}
+
+/* Rodapé */
+.footer {
+    background-color: var(--text-color);
+    color: var(--cor-de-fundo);
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+        margin-left: 100px;
+    }
+
+    .nav-menu {
+        display: none;
+        flex-direction: column; /* Alterado para exibir como coluna */
+        position: absolute;
+        top: 80px;
+        right: 0px;
+        background-color: var(--cor-principal);
+        padding: 1rem;
+        width: 100%;
+        z-index: 1000;
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .nav-menu li {
+        margin: 0.5rem 0;
+    }
+
+    .nav-menu a {
+        color: var(--cor-de-fundo);
+        text-decoration: none;
+        font-weight: bold;
+    }
+}
+
+/* Ajustes para telas muito pequenas */
+@media (max-width: 375px) {
+    .header h1 {
+        font-size: 30px;
+    }
+    .main-content {
+        padding: 1rem;
+    }
+
+    .product-card img {
+        height: 250px;
+    }
+
+    .footer {
+        font-size: 0.9rem;
+    }
+}
